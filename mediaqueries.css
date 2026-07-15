@@ -45,9 +45,8 @@
     .about-containers {
       margin-top: 0;
     }
-    .contact-info-upper-container {
-      flex-direction: column;
-      gap: 1rem;
+    .contact-grid{
+      grid-template-columns: 1fr;
     }
   }
   
@@ -72,15 +71,10 @@
       margin-bottom: 2rem;
     }
     .about-containers,
-    .contact-info-upper-container,
     .btn-container {
       flex-wrap: wrap;
     }
-    .contact-info-container {
-      margin: 0;
-      width: 100%;
-    }
-    .contact-info-container p,
+    .contact-value,
     .nav-links li a {
       font-size: 1rem;
     }
