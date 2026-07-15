@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="description" content="Chethiya Sankalpa — Mobile & Web Developer. Portfolio showcasing projects, experience, and contact information." />
+    <meta name="keywords" content="Chethiya Sankalpa, Mobile Developer, Web Developer, Software Engineer, Portfolio, Kotlin, Flutter, React, Node.js" />
+    <meta name="author" content="Chethiya Sankalpa" />
+    <title>Chethiya Sankalpa | Mobile & Web Developer</title>
+    <link rel="icon" href="./assets/profile-pic-64.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
+    <a class="skip-link" href="#profile">Skip to main content</a>
+    <div id="scroll-progress" aria-hidden="true"></div>
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
     <!-- Navbar -->
     <nav id="desktop-nav">
       <div class="logo">Chethiya Sankalpa</div>
@@ -25,7 +36,7 @@
     <nav id="hamburger-nav">
       <div class="logo">Chethiya Sankalpa</div>
       <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
+        <div class="hamburger-icon" onclick="toggleMenu()" role="button" aria-label="Toggle navigation" aria-expanded="false">
           <span></span><span></span><span></span>
         </div>
         <div class="menu-links">
@@ -40,16 +51,16 @@
     </nav>
 
     <!-- Profile Section -->
-    <section id="profile">
+    <section id="profile" class="reveal">
       <div class="section__pic-container">
         <img src="./assets/profile-pic.png" alt="Profile Picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Chethiya Sankalpa</h1>
-        <p class="section__text__p2">Software Engineer</p>
+        <p class="section__text__p2"><span id="typed-role">Mobile & Web Developer</span></p>
         <div class="btn-container">
-          <button class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
+          <button id="download-cv" class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
         </div>
         <div id="socials-container">
@@ -60,7 +71,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="reveal">
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
@@ -84,10 +95,10 @@
           </div>
           <div class="text-container">
             <p>
-              I am a Software Engineering undergraduate at NIBM,
-              currently pursuing my degree in Software Engineering. I have experience in developing POS systems,
-              web applications, and mobile applications. I am passionate about coding, detail-oriented,
-              and always eager to learn new technologies and contribute to innovative projects in the tech industry.
+              I'm a Mobile & Web developer studying Software Engineering at NIBM. I build responsive web apps and
+              mobile applications (Android / Kotlin, Flutter) and enjoy creating clean, maintainable code, user-centered
+              interfaces, and efficient backend integrations. I focus on delivering production-ready features and
+              learning modern tools to ship high-quality apps.
             </p>
           </div>
         </div>
@@ -96,7 +107,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="reveal">
       <p class="section__text__p1">Explore My</p>
       <h1 class="title">Experience</h1>
       <div class="experience-details-container">
@@ -146,13 +157,24 @@
               <article><img src="./assets/checkmark.png" class="icon" /><div><h3>PHP</h3><p>Intermediate</p></div></article>
             </div>
           </div>
+
+          <!-- Mobile -->
+          <div class="details-container">
+            <h2 class="experience-sub-title">Mobile Development</h2>
+            <div class="article-container">
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Android</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Kotlin</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Flutter</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>React Native</h3><p>Intermediate</p></div></article>
+            </div>
+          </div>
         </div>
       </div>
       <img src="./assets/arrow.png" class="icon arrow" alt="Arrow Down" onclick="location.href='./#projects'" />
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="reveal">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
@@ -200,7 +222,7 @@
     </section>
 
     <!-- Contact Section -->
-<section id="contact">
+  <section id="contact" class="reveal">
   <p class="section__text__p1">Get in Touch</p>
   <h1 class="title">Contact Me</h1>
   <div class="contact-info-upper-container">
@@ -216,6 +238,24 @@
       <img src="./assets/phone.png" class="icon contact-icon" alt="Phone" />
       <p><a href="tel:+94702008522">+94 702008522</a></p>
     </div>
+  </div>
+  <div class="contact-form-container">
+    <form id="contact-form" aria-label="Contact form">
+      <div class="field-row">
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+      </div>
+      <div class="field-row">
+        <input type="text" id="subject" name="subject" placeholder="Subject" />
+      </div>
+      <div class="field-row">
+        <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+      </div>
+      <div class="btn-container">
+        <button type="submit" class="btn btn-color-1">Send Message</button>
+        <button type="button" id="download-cv-2" class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
+      </div>
+    </form>
   </div>
 </section>
 

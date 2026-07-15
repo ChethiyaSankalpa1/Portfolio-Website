@@ -45,19 +45,27 @@
     .about-containers {
       margin-top: 0;
     }
+    .contact-info-upper-container {
+      flex-direction: column;
+      gap: 1rem;
+    }
   }
   
   @media screen and (max-width: 600px) {
     #contact,
     footer {
-      height: 40vh;
+      height: auto;
+      min-height: 40vh;
     }
     #profile {
-      height: 83vh;
+      height: auto;
+      min-height: 83vh;
       margin-bottom: 0;
+      padding: 4vh 0;
     }
     article {
       font-size: 1rem;
+      width: 100%;
     }
     footer nav {
       height: fit-content;
@@ -70,6 +78,7 @@
     }
     .contact-info-container {
       margin: 0;
+      width: 100%;
     }
     .contact-info-container p,
     .nav-links li a {
@@ -100,5 +109,15 @@
     .text-container {
       text-align: justify;
     }
+    .btn {
+      padding: 0.8rem 1.5rem;
+      min-width: 140px;
+      font-size: 0.9rem;
+    }
+    .section__pic-container::before {
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+    }
   }
-  
