@@ -65,53 +65,59 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-16 sm:py-28 px-4 sm:px-6 overflow-hidden">
-      <div className="absolute bottom-0 right-1/4 w-[300px] sm:w-[500px] h-[300px] sm:h-[400px] bg-indigo-600/7 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
+    <section id="contact" className="relative py-20 sm:py-32 px-4 sm:px-6 overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute bottom-10 left-1/3 w-[350px] sm:w-[550px] h-[300px] sm:h-[450px] bg-indigo-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
         {/* Section heading */}
-        <div className="text-center mb-10 sm:mb-16">
-          <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-2 sm:mb-3">Get in Touch</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4">Contact Me</h2>
-          <p className="text-xs sm:text-sm md:text-base text-slate-400 max-w-xl mx-auto">
+        <div className="text-center mb-12 sm:mb-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold uppercase tracking-widest mb-3">
+            <span>Get in Touch</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4 tracking-tight">Contact Me</h2>
+          <p className="text-xs sm:text-sm md:text-base text-slate-400 max-w-xl mx-auto leading-relaxed">
             Open to IT support roles, junior developer positions, internships, and freelance projects. Reach out anytime.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-start">
           {/* Left: Contact cards */}
           <div className="flex flex-col gap-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               {CONTACT_CARDS.map(({ icon: Icon, label, value, href, color, bg }) => (
                 <a
                   key={label}
                   href={href}
                   target={label !== 'Email' && label !== 'Phone' ? '_blank' : undefined}
                   rel="noopener noreferrer"
-                  className={`flex items-center gap-3.5 p-3.5 sm:p-4 rounded-xl border transition-all duration-200 group active:scale-98 ${bg}`}
+                  className={`flex items-center gap-4 p-4 rounded-2xl border transition-all duration-300 group hover:-translate-y-0.5 active:scale-98 shadow-sm ${bg}`}
                 >
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-white/5 flex-shrink-0 ${color} group-hover:scale-110 transition-transform duration-200`}>
-                    <Icon size={18} />
+                  <div className={`w-11 h-11 rounded-xl flex items-center justify-center bg-white/[0.05] border border-white/[0.08] flex-shrink-0 ${color} group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
+                    <Icon size={19} />
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[10px] sm:text-xs text-slate-500 font-medium uppercase tracking-wide">{label}</p>
-                    <p className={`text-xs sm:text-sm font-semibold ${color} truncate`}>{value}</p>
+                    <p className="text-[10px] sm:text-xs text-slate-400 font-semibold uppercase tracking-wider">{label}</p>
+                    <p className={`text-xs sm:text-sm font-bold ${color} truncate mt-0.5`}>{value}</p>
                   </div>
                 </a>
               ))}
             </div>
 
             {/* Availability message */}
-            <div className="glass-card rounded-2xl p-5 sm:p-6 mt-1 sm:mt-2">
-              <h3 className="text-sm sm:text-base font-bold text-white mb-3">Currently Available For</h3>
-              <ul className="flex flex-col gap-2.5">
+            <div className="glass-card rounded-2xl p-6 sm:p-7 mt-2 border border-white/[0.08]">
+              <div className="flex items-center gap-2 mb-4">
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
+                <h3 className="text-sm sm:text-base font-bold text-white tracking-tight">Currently Available For</h3>
+              </div>
+              <ul className="flex flex-col gap-3">
                 {[
                   'IT Support Roles & Technical Problem-Solving',
                   'Junior Software Engineer / Developer Roles',
                   'Mobile (Android / Flutter) & Web (React / Node.js) Projects',
                   'Software Engineering Internships',
                 ].map(item => (
-                  <li key={item} className="flex items-center gap-2 text-xs sm:text-sm text-slate-400">
+                  <li key={item} className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-300 bg-white/[0.02] p-2.5 rounded-xl border border-white/[0.04]">
                     <CheckCircle size={15} className="text-emerald-400 flex-shrink-0" />
                     <span>{item}</span>
                   </li>
@@ -121,37 +127,40 @@ export default function Contact() {
           </div>
 
           {/* Right: Contact form */}
-          <div className="glass-card rounded-2xl p-5 sm:p-7">
+          <div className="glass-card rounded-2xl p-6 sm:p-8 border border-white/[0.08] shadow-xl">
             {sent ? (
-              <div className="flex flex-col items-center justify-center py-10 sm:py-12 text-center gap-4">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">
-                  <CheckCircle size={30} className="text-emerald-400" />
+              <div className="flex flex-col items-center justify-center py-12 text-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+                  <CheckCircle size={32} className="text-emerald-400" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-white">Message Ready!</h3>
-                <p className="text-slate-400 text-xs sm:text-sm max-w-sm">
+                <p className="text-slate-400 text-xs sm:text-sm max-w-sm leading-relaxed">
                   Your mail client has been opened with your message. Send it away and I'll get back to you promptly!
                 </p>
                 <button
                   onClick={() => setSent(false)}
-                  className="mt-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-xs sm:text-sm font-semibold transition active:scale-95"
+                  className="mt-2 px-6 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-white text-xs sm:text-sm font-semibold transition shadow-lg shadow-indigo-600/30 active:scale-95 cursor-pointer"
                 >
                   Send Another Message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 sm:gap-4" noValidate>
-                <h3 className="text-base sm:text-lg font-bold text-white mb-0.5">Send a Direct Message</h3>
+              <form onSubmit={handleSubmit} className="flex flex-col gap-4" noValidate>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-indigo-400" />
+                  <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">Send a Direct Message</h3>
+                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <input
                       type="text"
                       placeholder="Your Name *"
                       value={form.name}
                       onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                      className={`w-full px-3.5 py-3 rounded-xl bg-white/5 border text-slate-200 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition ${errors.name ? 'border-rose-500/60' : 'border-white/10 focus:border-indigo-500/50'}`}
+                      className={`w-full px-4 py-3 rounded-xl bg-white/[0.03] border text-slate-100 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition duration-200 ${errors.name ? 'border-rose-500/70 bg-rose-500/5' : 'border-white/[0.1] focus:border-indigo-500/50 hover:border-white/20'}`}
                     />
-                    {errors.name && <p className="text-xs text-rose-400 mt-1">{errors.name}</p>}
+                    {errors.name && <p className="text-xs text-rose-400 mt-1 font-medium">{errors.name}</p>}
                   </div>
                   <div>
                     <input
@@ -159,9 +168,9 @@ export default function Contact() {
                       placeholder="Your Email *"
                       value={form.email}
                       onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                      className={`w-full px-3.5 py-3 rounded-xl bg-white/5 border text-slate-200 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition ${errors.email ? 'border-rose-500/60' : 'border-white/10 focus:border-indigo-500/50'}`}
+                      className={`w-full px-4 py-3 rounded-xl bg-white/[0.03] border text-slate-100 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition duration-200 ${errors.email ? 'border-rose-500/70 bg-rose-500/5' : 'border-white/[0.1] focus:border-indigo-500/50 hover:border-white/20'}`}
                     />
-                    {errors.email && <p className="text-xs text-rose-400 mt-1">{errors.email}</p>}
+                    {errors.email && <p className="text-xs text-rose-400 mt-1 font-medium">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -170,7 +179,7 @@ export default function Contact() {
                   placeholder="Subject"
                   value={form.subject}
                   onChange={e => setForm(f => ({ ...f, subject: e.target.value }))}
-                  className="w-full px-3.5 py-3 rounded-xl bg-white/5 border border-white/10 focus:border-indigo-500/50 text-slate-200 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition"
+                  className="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/[0.1] hover:border-white/20 focus:border-indigo-500/50 text-slate-100 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition duration-200"
                 />
 
                 <div>
@@ -179,14 +188,14 @@ export default function Contact() {
                     rows={4}
                     value={form.message}
                     onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                    className={`w-full px-3.5 py-3 rounded-xl bg-white/5 border text-slate-200 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition resize-none ${errors.message ? 'border-rose-500/60' : 'border-white/10 focus:border-indigo-500/50'}`}
+                    className={`w-full px-4 py-3 rounded-xl bg-white/[0.03] border text-slate-100 placeholder-slate-500 text-sm outline-none focus:ring-2 focus:ring-indigo-500/40 transition duration-200 resize-none ${errors.message ? 'border-rose-500/70 bg-rose-500/5' : 'border-white/[0.1] focus:border-indigo-500/50 hover:border-white/20'}`}
                   />
-                  {errors.message && <p className="text-xs text-rose-400 mt-1">{errors.message}</p>}
+                  {errors.message && <p className="text-xs text-rose-400 mt-1 font-medium">{errors.message}</p>}
                 </div>
 
                 <button
                   type="submit"
-                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold shadow-lg shadow-indigo-600/25 transition-all duration-200 active:scale-95"
+                  className="flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white text-sm font-semibold shadow-xl shadow-indigo-600/30 hover:shadow-indigo-500/40 transition-all duration-300 hover:-translate-y-0.5 active:scale-95 cursor-pointer mt-1"
                 >
                   <Send size={15} />
                   <span>Send Message</span>

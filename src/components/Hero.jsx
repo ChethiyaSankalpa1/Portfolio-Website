@@ -10,45 +10,58 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-20 pb-12 sm:pt-24 sm:pb-16">
+    <section id="hero" className="relative min-h-[95vh] sm:min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6 pt-24 pb-14 sm:pt-28 sm:pb-20">
       {/* Ambient background glows */}
-      <div className="absolute inset-0 pointer-events-none select-none">
-        <div className="absolute -top-40 -left-40 w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] bg-indigo-600/10 rounded-full blur-[90px] sm:blur-[130px]" />
-        <div className="absolute top-1/2 -right-48 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-cyan-500/8 rounded-full blur-[90px] sm:blur-[130px]" />
-        <div className="absolute bottom-0 left-1/3 w-[260px] sm:w-[500px] h-[200px] sm:h-[400px] bg-violet-600/8 rounded-full blur-[80px] sm:blur-[100px]" />
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-50" />
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        <div className="absolute -top-32 -left-32 w-[380px] sm:w-[720px] h-[380px] sm:h-[720px] bg-indigo-600/15 rounded-full blur-[100px] sm:blur-[140px] animate-float-orb" />
+        <div className="absolute top-1/3 -right-40 w-[320px] sm:w-[650px] h-[320px] sm:h-[650px] bg-cyan-500/10 rounded-full blur-[100px] sm:blur-[140px] animate-float-orb-slow" />
+        <div className="absolute -bottom-20 left-1/4 w-[280px] sm:w-[520px] h-[220px] sm:h-[420px] bg-violet-600/10 rounded-full blur-[90px] sm:blur-[120px]" />
+        
+        {/* Subtle geometric dot grid pattern */}
+        <div className="absolute inset-0 bg-[radial-gradient(#312e81_1px,transparent_1px)] [background-size:24px_24px] opacity-25" />
       </div>
 
-      <div className="relative max-w-6xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center gap-10 sm:gap-14 lg:gap-16">
+      <div className="relative max-w-6xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center gap-12 sm:gap-14 lg:gap-16">
+        {/* Text content */}
         <div className="flex-1 text-center lg:text-left w-full">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs sm:text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+          {/* Availability pill */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 mb-5 sm:mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs sm:text-sm font-medium shadow-sm shadow-emerald-500/10 backdrop-blur-md">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+            </span>
             <span>Open to Opportunities &bull; Panwila, Sri Lanka</span>
           </div>
 
-          <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 leading-tight tracking-tight">
-            <span className="text-white">Chethiya</span>
+          {/* Name */}
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 leading-[1.08] tracking-tight">
+            <span className="text-white drop-shadow-sm">Chethiya</span>
             <br />
             <span className="text-gradient">Sankalpa</span>
           </h1>
 
-          <p className="text-lg sm:text-2xl font-semibold text-slate-300 mb-3 sm:mb-4">
-            Software Engineering Graduand <span className="text-indigo-400">|</span> IT Support
+          {/* Role */}
+          <p className="text-lg sm:text-2xl font-semibold text-slate-200 mb-3 sm:mb-4 flex items-center justify-center lg:justify-start gap-2">
+            <span>Software Engineering Graduand</span>
+            <span className="text-indigo-400 font-normal">|</span>
+            <span className="text-cyan-300">IT Support</span>
           </p>
-          <p className="text-sm sm:text-base md:text-lg text-slate-400 mb-6 sm:mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+
+          <p className="text-sm sm:text-base md:text-lg text-slate-400 mb-7 sm:mb-9 max-w-lg mx-auto lg:mx-0 leading-relaxed font-normal">
             Building reliable web apps, responsive mobile experiences, and software systems. Familiar with application development, testing, maintenance, and technical problem-solving.
           </p>
 
-          <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 justify-center lg:justify-start mb-6 sm:mb-10 w-full sm:w-auto">
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-3.5 justify-center lg:justify-start mb-8 sm:mb-10 w-full sm:w-auto">
             <button
               onClick={() => scrollToSection('projects')}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-semibold text-sm shadow-lg shadow-indigo-600/30 transition-all duration-200 active:scale-95"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-600 hover:from-indigo-500 hover:to-indigo-400 text-white font-semibold text-sm shadow-xl shadow-indigo-600/30 hover:shadow-indigo-500/40 transition-all duration-300 hover:-translate-y-0.5 active:scale-95"
             >
               Explore Projects
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="w-full sm:w-auto px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-slate-200 font-semibold text-sm transition-all duration-200 active:scale-95 backdrop-blur-sm"
+              className="w-full sm:w-auto px-7 py-3 rounded-xl border border-white/15 bg-white/[0.04] hover:bg-white/[0.09] hover:border-white/25 text-slate-200 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 active:scale-95 backdrop-blur-md"
             >
               Contact Me
             </button>
@@ -56,13 +69,14 @@ export default function Hero() {
               href={`${BASE}assets/Chethiya_CV.pdf`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-slate-200 font-semibold text-sm transition-all duration-200 active:scale-95 backdrop-blur-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl border border-indigo-500/30 bg-indigo-500/10 hover:bg-indigo-500/20 hover:border-indigo-500/50 text-indigo-200 font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 active:scale-95 backdrop-blur-md shadow-sm shadow-indigo-500/10"
             >
               <Download size={15} />
               Download CV
             </a>
           </div>
 
+          {/* Socials */}
           <div className="flex items-center gap-3 justify-center lg:justify-start">
             {[
               { href: 'https://github.com/ChethiyaSankalpa1', label: 'GitHub', Icon: GithubIcon },
@@ -76,7 +90,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 title={label}
                 aria-label={label}
-                className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-xl border border-white/10 bg-white/5 text-slate-400 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-all duration-200 active:scale-95"
+                className="flex items-center justify-center w-11 h-11 rounded-xl border border-white/[0.09] bg-white/[0.03] text-slate-400 hover:text-white hover:border-indigo-400/50 hover:bg-indigo-500/15 transition-all duration-200 hover:-translate-y-0.5 shadow-sm active:scale-95"
               >
                 <Icon size={18} />
               </a>
@@ -84,35 +98,40 @@ export default function Hero() {
           </div>
         </div>
 
+        {/* Profile Avatar Card */}
         <div className="flex-shrink-0 flex justify-center w-full sm:w-auto">
           <div className="relative">
-            <div className="absolute -inset-3 sm:-inset-4 rounded-3xl bg-gradient-to-tr from-indigo-600/30 via-cyan-500/20 to-violet-600/20 blur-xl sm:blur-2xl" />
-            <div className="relative glass-card rounded-3xl p-2 sm:p-2.5 shadow-2xl">
+            {/* Multi-tier gradient auras */}
+            <div className="absolute -inset-4 sm:-inset-6 rounded-[2.5rem] bg-gradient-to-tr from-indigo-600/35 via-cyan-500/25 to-violet-600/30 blur-2xl opacity-80" />
+            
+            <div className="relative glass-card rounded-3xl p-2.5 sm:p-3 shadow-2xl border border-white/10">
               <img
                 src={`${BASE}assets/profile-pic.png`}
                 alt="Chethiya Sankalpa"
-                className="w-56 h-56 xs:w-64 xs:h-64 sm:w-80 sm:h-80 object-cover rounded-2xl"
+                className="w-60 h-60 xs:w-68 xs:h-68 sm:w-80 sm:h-80 object-cover object-top rounded-2xl shadow-inner"
               />
-              <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 glass-panel rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl border border-white/10">
-                <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Experience</p>
+              {/* Stat badges */}
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 glass-panel rounded-2xl px-4 py-2.5 sm:px-4 sm:py-3 shadow-xl border border-white/10 backdrop-blur-xl">
+                <p className="text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider">Experience</p>
                 <p className="text-sm sm:text-lg font-bold text-white">1+ Year</p>
               </div>
-              <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 glass-panel rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl border border-white/10">
-                <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Projects</p>
-                <p className="text-sm sm:text-lg font-bold text-gradient">7+</p>
+              <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 glass-panel rounded-2xl px-4 py-2.5 sm:px-4 sm:py-3 shadow-xl border border-white/10 backdrop-blur-xl">
+                <p className="text-[10px] sm:text-xs text-slate-400 font-medium uppercase tracking-wider">Projects</p>
+                <p className="text-sm sm:text-lg font-bold text-gradient">12+</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      {/* Down arrow scroll */}
       <button
         onClick={() => scrollToSection('about')}
-        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition group"
+        className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-slate-500 hover:text-indigo-400 transition-colors group cursor-pointer"
         aria-label="Scroll down to about"
       >
-        <span className="text-[10px] font-medium tracking-widest uppercase">Scroll</span>
-        <ChevronDown size={16} className="animate-bounce group-hover:text-indigo-400" />
+        <span className="text-[10px] font-medium tracking-widest uppercase text-slate-400 group-hover:text-indigo-300 transition-colors">Scroll</span>
+        <ChevronDown size={16} className="animate-bounce" />
       </button>
     </section>
   );
