@@ -1,5 +1,7 @@
 import { SOFT_SKILLS, LANGUAGES } from '../data.js';
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 const highlights = [
   { label: 'NIBM Graduate', sub: 'HND in Software Engineering', icon: '🎓' },
   { label: 'IT Support', sub: '6 months at Hostel First Mirissa', icon: '🛠️' },
@@ -10,11 +12,9 @@ const highlights = [
 export default function About() {
   return (
     <section id="about" className="relative py-16 sm:py-28 px-4 sm:px-6 overflow-hidden">
-      {/* Ambient glow */}
       <div className="absolute top-1/3 left-0 w-72 sm:w-96 h-72 sm:h-96 bg-indigo-600/6 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto">
-        {/* Section heading */}
         <div className="text-center mb-10 sm:mb-16">
           <p className="text-xs sm:text-sm font-semibold uppercase tracking-widest text-indigo-400 mb-2 sm:mb-3">Get to Know Me</p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4">About Me</h2>
@@ -24,18 +24,16 @@ export default function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-10 sm:gap-14 items-center">
-          {/* Left: About image & highlights */}
           <div className="flex flex-col gap-5 sm:gap-6">
             <div className="relative group">
               <div className="absolute -inset-2 rounded-3xl bg-gradient-to-tr from-indigo-600/20 to-cyan-500/10 blur-xl opacity-60 group-hover:opacity-90 transition-opacity duration-500 pointer-events-none" />
               <img
-                src="./assets/about-pic.png"
+                src={`${BASE}assets/about-pic.png`}
                 alt="About Chethiya"
                 className="relative rounded-2xl w-full max-h-64 sm:max-h-80 object-cover shadow-2xl"
               />
             </div>
 
-            {/* Quick stats highlights */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3">
               {highlights.map(({ label, sub, icon }) => (
                 <div key={label} className="glass-card rounded-xl p-3.5 sm:p-4 flex items-start gap-3 group">
@@ -49,9 +47,7 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right: Text content */}
           <div className="flex flex-col gap-6 sm:gap-8">
-            {/* Bio card */}
             <div className="glass-card rounded-2xl p-5 sm:p-6">
               <h3 className="text-base sm:text-lg font-semibold text-gradient mb-2.5 sm:mb-3">Professional Profile</h3>
               <p className="text-slate-300 leading-relaxed text-xs sm:text-sm">
@@ -59,7 +55,6 @@ export default function About() {
               </p>
             </div>
 
-            {/* Current focus */}
             <div className="glass-card rounded-2xl p-5 sm:p-6">
               <h3 className="text-base sm:text-lg font-semibold text-gradient-emerald mb-2.5 sm:mb-3">Current Focus Areas</h3>
               <ul className="flex flex-col gap-2">
@@ -77,7 +72,6 @@ export default function About() {
               </ul>
             </div>
 
-            {/* Soft skills & languages */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="glass-card rounded-2xl p-4 sm:p-5">
                 <h3 className="text-xs sm:text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wide">Soft Skills</h3>

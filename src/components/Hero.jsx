@@ -1,6 +1,8 @@
 import { Mail, Download, ChevronDown } from 'lucide-react';
 import { GithubIcon, LinkedinIcon } from './BrandIcons.jsx';
 
+const BASE = import.meta.env.BASE_URL || '/';
+
 export default function Hero() {
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -14,27 +16,22 @@ export default function Hero() {
         <div className="absolute -top-40 -left-40 w-[350px] sm:w-[700px] h-[350px] sm:h-[700px] bg-indigo-600/10 rounded-full blur-[90px] sm:blur-[130px]" />
         <div className="absolute top-1/2 -right-48 w-[300px] sm:w-[600px] h-[300px] sm:h-[600px] bg-cyan-500/8 rounded-full blur-[90px] sm:blur-[130px]" />
         <div className="absolute bottom-0 left-1/3 w-[260px] sm:w-[500px] h-[200px] sm:h-[400px] bg-violet-600/8 rounded-full blur-[80px] sm:blur-[100px]" />
-        {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSA2MCAwIEwgMCAwIDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAyNSkiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-50" />
       </div>
 
       <div className="relative max-w-6xl mx-auto w-full flex flex-col-reverse lg:flex-row items-center gap-10 sm:gap-14 lg:gap-16">
-        {/* Text content */}
         <div className="flex-1 text-center lg:text-left w-full">
-          {/* Availability pill */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 mb-4 sm:mb-6 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs sm:text-sm font-medium">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span>Open to Opportunities &bull; Panwila, Sri Lanka</span>
           </div>
 
-          {/* Name */}
           <h1 className="text-4xl xs:text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-3 sm:mb-4 leading-tight tracking-tight">
             <span className="text-white">Chethiya</span>
             <br />
             <span className="text-gradient">Sankalpa</span>
           </h1>
 
-          {/* Role */}
           <p className="text-lg sm:text-2xl font-semibold text-slate-300 mb-3 sm:mb-4">
             Software Engineering Graduand <span className="text-indigo-400">|</span> IT Support
           </p>
@@ -42,7 +39,6 @@ export default function Hero() {
             Building reliable web apps, responsive mobile experiences, and software systems. Familiar with application development, testing, maintenance, and technical problem-solving.
           </p>
 
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 sm:gap-3 justify-center lg:justify-start mb-6 sm:mb-10 w-full sm:w-auto">
             <button
               onClick={() => scrollToSection('projects')}
@@ -57,7 +53,7 @@ export default function Hero() {
               Contact Me
             </button>
             <a
-              href="./assets/Chethiya_CV.pdf"
+              href={`${BASE}assets/Chethiya_CV.pdf`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-white/15 bg-white/5 hover:bg-white/10 text-slate-200 font-semibold text-sm transition-all duration-200 active:scale-95 backdrop-blur-sm"
@@ -67,7 +63,6 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Socials */}
           <div className="flex items-center gap-3 justify-center lg:justify-start">
             {[
               { href: 'https://github.com/ChethiyaSankalpa1', label: 'GitHub', Icon: GithubIcon },
@@ -89,18 +84,15 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Profile Avatar */}
         <div className="flex-shrink-0 flex justify-center w-full sm:w-auto">
           <div className="relative">
-            {/* Glowing ring */}
             <div className="absolute -inset-3 sm:-inset-4 rounded-3xl bg-gradient-to-tr from-indigo-600/30 via-cyan-500/20 to-violet-600/20 blur-xl sm:blur-2xl" />
             <div className="relative glass-card rounded-3xl p-2 sm:p-2.5 shadow-2xl">
               <img
-                src="./assets/profile-pic.png"
+                src={`${BASE}assets/profile-pic.png`}
                 alt="Chethiya Sankalpa"
                 className="w-56 h-56 xs:w-64 xs:h-64 sm:w-80 sm:h-80 object-cover rounded-2xl"
               />
-              {/* Stat badges */}
               <div className="absolute -bottom-3 -right-3 sm:-bottom-5 sm:-right-5 glass-panel rounded-xl sm:rounded-2xl px-3 py-2 sm:px-4 sm:py-3 shadow-xl border border-white/10">
                 <p className="text-[10px] sm:text-xs text-slate-400 font-medium">Experience</p>
                 <p className="text-sm sm:text-lg font-bold text-white">1+ Year</p>
@@ -114,7 +106,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Down arrow scroll */}
       <button
         onClick={() => scrollToSection('about')}
         className="hidden md:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-1 text-slate-500 hover:text-slate-300 transition group"

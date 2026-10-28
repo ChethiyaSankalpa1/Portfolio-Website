@@ -1,3 +1,5 @@
+const BASE = import.meta.env.BASE_URL || '/';
+
 export const NAV_LINKS = ['About', 'Skills', 'Projects', 'Education', 'Contact'];
 
 export const SKILLS = {
@@ -35,7 +37,7 @@ export const PROJECTS = [
     highlights: ['Product search & filter', 'Cart state management', 'Responsive layout', 'Clean component architecture'],
     tags: ['React.js', 'Tailwind CSS', 'JavaScript'],
     github: 'https://github.com/ChethiyaSankalpa1',
-    image: './assets/project-4.svg',
+    image: `${BASE}assets/project-4.svg`,
   },
   {
     id: 2,
@@ -45,7 +47,7 @@ export const PROJECTS = [
     highlights: ['Data cleaning & EDA', 'Feature engineering', 'Model training & evaluation', 'Confusion matrix analysis'],
     tags: ['Python', 'Jupyter', 'Scikit-learn', 'Pandas'],
     github: 'https://github.com/ChethiyaSankalpa1',
-    image: './assets/project-5.svg',
+    image: `${BASE}assets/project-5.svg`,
   },
   {
     id: 3,
@@ -55,7 +57,7 @@ export const PROJECTS = [
     highlights: ['CRUD operations', 'MySQL integration', 'Grade management', 'Academic records'],
     tags: ['Java', 'NetBeans', 'MySQL'],
     github: 'https://github.com/ChethiyaSankalpa1',
-    image: './assets/project-7.svg',
+    image: `${BASE}assets/project-7.svg`,
   },
   {
     id: 4,
@@ -65,7 +67,7 @@ export const PROJECTS = [
     highlights: ['REST API integration', 'Category filtering', 'Article detail view', 'Responsive mobile UI'],
     tags: ['Android Studio', 'Java', 'REST API'],
     github: 'https://github.com/ChethiyaSankalpa1/News-Reporter-Api',
-    image: './assets/project-2.png',
+    image: `${BASE}assets/project-2.png`,
   },
   {
     id: 5,
@@ -75,7 +77,7 @@ export const PROJECTS = [
     highlights: ['Book issuance & returns', 'Member management', 'Search & filter', 'Admin dashboard'],
     tags: ['Java', 'MySQL', 'JDBC'],
     github: 'https://github.com/ChethiyaSankalpa1/Library-Management-System',
-    image: './assets/project-1.png',
+    image: `${BASE}assets/project-1.png`,
   },
   {
     id: 6,
@@ -85,7 +87,7 @@ export const PROJECTS = [
     highlights: ['Order management', 'Inventory control', 'Sales reporting', 'Billing system'],
     tags: ['Java', 'GUI', 'MySQL'],
     github: 'https://github.com/ChethiyaSankalpa1/Cafe-Management-System',
-    image: './assets/project-3.png',
+    image: `${BASE}assets/project-3.png`,
   },
   {
     id: 7,
@@ -95,7 +97,7 @@ export const PROJECTS = [
     highlights: ['Student registration', 'Teacher records', 'Course allocation', 'Admin reports'],
     tags: ['C#', '.NET', 'Database'],
     github: 'https://github.com/ChethiyaSankalpa1',
-    image: './assets/project-6.svg',
+    image: `${BASE}assets/project-6.svg`,
   },
 ];
 
