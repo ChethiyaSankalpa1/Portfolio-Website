@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Chethiya Sankalpa — Mobile & Web Developer. Portfolio showcasing projects, experience, and contact information." />
-    <meta name="keywords" content="Chethiya Sankalpa, Mobile Developer, Web Developer, Software Engineer, Portfolio, Kotlin, Flutter, React, Node.js" />
+    <meta name="description" content="Chethiya Sankalpa — Software Engineering Graduand & IT Support Specialist. Portfolio showcasing projects, experience, technical skills, and education." />
+    <meta name="keywords" content="Chethiya Sankalpa, Software Engineer, IT Support, Mobile Developer, Web Developer, React, Node.js, Python, Java, Flutter, NIBM" />
     <meta name="author" content="Chethiya Sankalpa" />
-    <title>Chethiya Sankalpa | Mobile & Web Developer</title>
+    <title>Chethiya Sankalpa | Software Engineering Graduand | IT Support</title>
     <link rel="icon" href="./assets/profile-pic-64.png" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
@@ -20,7 +20,8 @@
       <span class="orb orb-2"></span>
       <span class="orb orb-3"></span>
     </div>
-    <!-- Navbar -->
+
+    <!-- Desktop Navbar -->
     <nav id="desktop-nav">
       <div class="nav-inner">
         <a class="logo" href="#profile" aria-label="Go to top">Chethiya <span>Sankalpa</span></a>
@@ -28,6 +29,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="nav-actions">
@@ -36,6 +38,7 @@
       </div>
     </nav>
 
+    <!-- Mobile Navbar -->
     <nav id="hamburger-nav">
       <a class="logo" href="#profile" aria-label="Go to top">Chethiya <span>Sankalpa</span></a>
       <div class="hamburger-menu">
@@ -47,6 +50,7 @@
             <li><a href="#about" onclick="toggleMenu()">About</a></li>
             <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#education" onclick="toggleMenu()">Education</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             <li><a href="./assets/Chethiya_CV.pdf" target="_blank" rel="noopener" onclick="toggleMenu()">Download CV</a></li>
           </ul>
@@ -57,19 +61,24 @@
     <!-- Profile Section -->
     <section id="profile" class="reveal">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="Profile Picture" />
+        <img src="./assets/profile-pic.png" alt="Chethiya Sankalpa Profile Picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Chethiya Sankalpa</h1>
-        <p class="section__text__p2"><span id="typed-role">Mobile & Web Developer</span></p>
+        <p class="section__text__p2"><span id="typed-role">Software Engineering Graduand</span></p>
+        <div class="location-badge">
+          <span class="location-dot"></span>
+          <span>Panwila, Sri Lanka &bull; Open to Opportunities</span>
+        </div>
         <div class="btn-container">
           <button id="download-cv" class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
           <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
         </div>
         <div id="socials-container">
-          <img src="./assets/linkedin.png" class="icon" alt="LinkedIn" onclick="location.href='https://www.linkedin.com/in/chethiya-sankalapa-ba3a87316/'" />
-          <img src="./assets/github.png" class="icon" alt="GitHub" onclick="location.href='https://github.com/ChethiyaSankalpa1'" />
+          <img src="./assets/linkedin.png" class="icon" alt="LinkedIn" title="LinkedIn" onclick="location.href='https://www.linkedin.com/in/chethiya-sankalapa-ba3a87316/'" />
+          <img src="./assets/github.png" class="icon" alt="GitHub" title="GitHub" onclick="location.href='https://github.com/ChethiyaSankalpa1'" />
+          <img src="./assets/email.png" class="icon" alt="Email" title="Email" onclick="location.href='mailto:chethiyasankalpa456@gmail.com'" />
         </div>
       </div>
     </section>
@@ -80,29 +89,24 @@
       <h1 class="title">About Me</h1>
       <div class="section-container">
         <div class="section__pic-container">
-          <img src="./assets/about-pic.png" alt="About Picture" class="about-pic" />
+          <img src="./assets/about-pic.png" alt="Chethiya Sankalpa About" class="about-pic" />
         </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
               <img src="./assets/experience.png" alt="Experience Icon" class="icon" />
               <h3>Experience</h3>
-              <p>2+ years <br />Software Engineering</p>
+              <p>IT Support & Mobile/Web Dev<br />1+ Year Industry Exposure</p>
             </div>
             <div class="details-container">
               <img src="./assets/education.png" alt="Education Icon" class="icon" />
               <h3>Education</h3>
-              <p>Higher National Diploma in Software Engineering
-                <br />Diploma in Software Engineering
-              </p>
+              <p>Higher National Diploma in SE<br />Diploma in Software Engineering (NIBM)</p>
             </div>
           </div>
           <div class="text-container">
             <p>
-              Software Engineering graduand at NIBM with hands-on experience building responsive web applications and
-              mobile apps. I enjoy creating clean, maintainable code, modern UI, and reliable backend integrations.
-              I’m actively improving my skills through real projects and looking for opportunities to contribute to a
-              professional development team.
+              Software Engineering graduand from the National Institute of Business Management (NIBM), with experience in IT support and mobile and web application development. Completed six months of IT Support experience at Hostel First Mirissa and a six-month internship as a Mobile & Web Developer at Nova Script. Familiar with programming, application development, software testing, maintenance, and technical problem-solving.
             </p>
           </div>
         </div>
@@ -110,68 +114,104 @@
       <img src="./assets/arrow.png" class="icon arrow" alt="Arrow Down" onclick="location.href='./#experience'" />
     </section>
 
-    <!-- Experience Section -->
+    <!-- Experience & Skills Section -->
     <section id="experience" class="reveal">
       <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
+      <h1 class="title">Experience & Skills</h1>
       <div class="experience-details-container">
+
+        <!-- Professional Work Experience -->
+        <h2 class="section-sub-heading">Professional Experience</h2>
+        <div class="work-experience-grid">
+          <div class="work-card">
+            <div class="work-card-header">
+              <h3 class="work-title">IT Support</h3>
+              <span class="work-badge">6 Months</span>
+            </div>
+            <p class="work-company">Hostel First Mirissa</p>
+            <p class="work-desc">Provided IT support and assistance with day-to-day technical issues, hardware/software troubleshooting, and network support.</p>
+          </div>
+
+          <div class="work-card">
+            <div class="work-card-header">
+              <h3 class="work-title">Mobile & Web Developer Intern</h3>
+              <span class="work-badge">6 Months</span>
+            </div>
+            <p class="work-company">Nova Script</p>
+            <p class="work-desc">Supported software development, testing, deployment, and application maintenance across web and mobile projects.</p>
+          </div>
+
+          <div class="work-card">
+            <div class="work-card-header">
+              <h3 class="work-title">Sales Member</h3>
+              <span class="work-badge">Sales & Customer Service</span>
+            </div>
+            <p class="work-company">HNB Assurance PLC, Kandy</p>
+            <p class="work-desc">Supported sales activities, client communication, and developed interpersonal, consultative customer service skills.</p>
+          </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <h2 class="section-sub-heading">Technical Skills</h2>
         <div class="about-containers">
 
-          <!-- Frontend -->
+          <!-- Programming Languages -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
+            <h2 class="experience-sub-title">Programming Languages</h2>
             <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>HTML</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>CSS</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Bootstrap</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>React.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Material UI</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>JavaScript</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Python</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Java</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>PHP</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>C</h3><p>Proficient</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>C++</h3><p>Proficient</p></div></article>
             </div>
           </div>
 
-          <!-- Backend -->
+          <!-- Web Development -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Backend Development</h2>
+            <h2 class="experience-sub-title">Web Development</h2>
             <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Node.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Express.js</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>PHP</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>React.js</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Node.js</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>CSS3</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Bootstrap</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Tailwind CSS</h3><p>Experienced</p></div></article>
             </div>
           </div>
 
-          <!-- Databases -->
+          <!-- Databases & Mobile -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Databases</h2>
+            <h2 class="experience-sub-title">Databases & Mobile</h2>
             <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MySQL</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>MongoDB</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>PostgreSQL</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>MySQL</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>MongoDB</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Flutter</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Android Studio</h3><p>Experienced</p></div></article>
             </div>
           </div>
 
-          <!-- Languages -->
+          <!-- Tools -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Languages</h2>
+            <h2 class="experience-sub-title">Tools & Environments</h2>
             <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>JavaScript</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Java</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>C</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>C++</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Kotlin</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>PHP</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>GitHub</h3><p>Experienced</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Figma</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>NetBeans</h3><p>Experienced</p></div></article>
             </div>
           </div>
 
-          <!-- Mobile -->
+          <!-- Soft Skills -->
           <div class="details-container">
-            <h2 class="experience-sub-title">Mobile Development</h2>
+            <h2 class="experience-sub-title">Soft Skills</h2>
             <div class="article-container">
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Android</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Kotlin</h3><p>Experienced</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>Flutter</h3><p>Intermediate</p></div></article>
-              <article><img src="./assets/checkmark.png" class="icon" /><div><h3>React Native</h3><p>Intermediate</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Communication</h3><p>Professional</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Teamwork</h3><p>Collaborative</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Time Management</h3><p>Reliable</p></div></article>
+              <article><img src="./assets/checkmark.png" class="icon" alt="Checkmark" /><div><h3>Problem-Solving</h3><p>Analytical</p></div></article>
             </div>
           </div>
+
         </div>
       </div>
       <img src="./assets/arrow.png" class="icon arrow" alt="Arrow Down" onclick="location.href='./#projects'" />
@@ -180,76 +220,144 @@
     <!-- Projects Section -->
     <section id="projects" class="reveal">
       <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title">Selected Projects</h1>
       <div class="experience-details-container">
         <div class="about-containers">
 
-          <!-- Project 1 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-1.png" class="project-img" alt="Project 1" />
+          <!-- Project 1: E-Commerce App -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-4.svg" class="project-img" alt="E-Commerce App" />
+              </div>
+              <h2 class="experience-sub-title project-title">E-Commerce App</h2>
+              <p class="project-desc">Responsive React.js and Tailwind CSS website featuring dynamic product listings, product details pages, and an interactive shopping cart.</p>
+              <div class="project-tags">
+                <span class="tag">React.js</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">Library Management System</h2>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1/Library-Management-System'">Live Demo</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
             </div>
           </div>
 
-          <!-- Project 2 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-2.png" class="project-img" alt="Project 2" />
+          <!-- Project 2: Heart Attack Risk Prediction -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-5.svg" class="project-img" alt="Heart Attack Risk Prediction" />
+              </div>
+              <h2 class="experience-sub-title project-title">Heart Attack Risk Prediction</h2>
+              <p class="project-desc">Machine-learning project developed in Python/Jupyter involving healthcare dataset preprocessing, feature extraction, and predictive model training.</p>
+              <div class="project-tags">
+                <span class="tag">Python</span>
+                <span class="tag">Jupyter</span>
+                <span class="tag">Machine Learning</span>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">News Reporter Api</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
+            </div>
+          </div>
+
+          <!-- Project 3: Student Management System -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-7.svg" class="project-img" alt="Student Management System" />
+              </div>
+              <h2 class="experience-sub-title project-title">Student Management System</h2>
+              <p class="project-desc">Academic data management desktop system developed using Java and NetBeans to manage student enrollment, records, and performance tracking.</p>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">NetBeans</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
+            </div>
+          </div>
+
+          <!-- Project 4: News Reporter Mobile App -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-2.png" class="project-img" alt="News Reporter Mobile App" />
+              </div>
+              <h2 class="experience-sub-title project-title">News Reporter Mobile App</h2>
+              <p class="project-desc">Mobile news-reporting application built with Android Studio delivering real-time article browsing, headlines, and category filtering.</p>
+              <div class="project-tags">
+                <span class="tag">Android Studio</span>
+                <span class="tag">Java</span>
+                <span class="tag">REST API</span>
+              </div>
+            </div>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1/News-Reporter-Api'">Live Demo</button>
             </div>
           </div>
 
-          <!-- Project 3 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-3.png" class="project-img" alt="Project 3" />
+          <!-- Project 5: Library Management System -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-1.png" class="project-img" alt="Library Management System" />
+              </div>
+              <h2 class="experience-sub-title project-title">Library Management System</h2>
+              <p class="project-desc">Book tracking and library management application developed with database connectivity for book issuance, returns, and catalog administration.</p>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">Database</span>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">Cafe Management System</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
+              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1/Library-Management-System'">Live Demo</button>
+            </div>
+          </div>
+
+          <!-- Project 6: Cafe Management System -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-3.png" class="project-img" alt="Cafe Management System" />
+              </div>
+              <h2 class="experience-sub-title project-title">Cafe Management System</h2>
+              <p class="project-desc">Point-of-sale and cafe operations management application developed in Java featuring order billing, inventory tracking, and sales reporting.</p>
+              <div class="project-tags">
+                <span class="tag">Java</span>
+                <span class="tag">GUI</span>
+                <span class="tag">POS</span>
+              </div>
+            </div>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1/Cafe-Management-System'">Live Demo</button>
             </div>
           </div>
 
-          <!-- Project 4 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-4.svg" class="project-img" alt="E-Commerce Web App" />
+          <!-- Project 7: School Management System -->
+          <div class="details-container color-container project-card">
+            <div>
+              <div class="article-container">
+                <img src="./assets/project-6.svg" class="project-img" alt="School Management System" />
+              </div>
+              <h2 class="experience-sub-title project-title">School Management System</h2>
+              <p class="project-desc">School administration application developed using C# to manage student registration, teacher records, course allocations, and administrative reports.</p>
+              <div class="project-tags">
+                <span class="tag">C#</span>
+                <span class="tag">.NET</span>
+                <span class="tag">Desktop App</span>
+              </div>
             </div>
-            <h2 class="experience-sub-title project-title">E-Commerce Web App</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
-            </div>
-          </div>
-
-          <!-- Project 5 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-5.svg" class="project-img" alt="Heart Attack Risk Prediction" />
-            </div>
-            <h2 class="experience-sub-title project-title">Heart Attack Risk Prediction</h2>
-            <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
-              <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
-            </div>
-          </div>
-
-          <!-- Project 6 -->
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img src="./assets/project-6.svg" class="project-img" alt="School Management System" />
-            </div>
-            <h2 class="experience-sub-title project-title">School Management System</h2>
             <div class="btn-container">
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">GitHub</button>
               <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ChethiyaSankalpa1'">Repo</button>
@@ -258,57 +366,128 @@
 
         </div>
       </div>
+      <img src="./assets/arrow.png" class="icon arrow" alt="Arrow Down" onclick="location.href='./#education'" />
+    </section>
+
+    <!-- Education & Activities Section -->
+    <section id="education" class="reveal">
+      <p class="section__text__p1">Academic Journey & Background</p>
+      <h1 class="title">Education & Activities</h1>
+      
+      <!-- Academic Qualifications -->
+      <div class="education-grid">
+        <div class="education-card">
+          <h3>Higher National Diploma in Software Engineering</h3>
+          <p class="education-institution">National Institute of Business Management (NIBM)</p>
+          <p class="education-year">2024 &ndash; 2025</p>
+        </div>
+
+        <div class="education-card">
+          <h3>Diploma in Software Engineering</h3>
+          <p class="education-institution">National Institute of Business Management (NIBM)</p>
+          <p class="education-year">2024</p>
+        </div>
+
+        <div class="education-card">
+          <h3>Diploma in Spoken English</h3>
+          <p class="education-institution">ICBT Campus</p>
+          <p class="education-year">2024</p>
+        </div>
+
+        <div class="education-card">
+          <h3>Certificate in Software Engineering</h3>
+          <p class="education-institution">National Institute of Business Management (NIBM)</p>
+          <p class="education-year">2023</p>
+        </div>
+
+        <div class="education-card">
+          <h3>G.C.E. Advanced Level</h3>
+          <p class="education-institution">St. Sylvester's College, Kandy</p>
+          <p class="education-year">2020 &ndash; 2021</p>
+        </div>
+
+        <div class="education-card">
+          <h3>G.C.E. Ordinary Level</h3>
+          <p class="education-institution">Wattegama Central College</p>
+          <p class="education-year">2018</p>
+        </div>
+      </div>
+
+      <!-- Activities & Languages -->
+      <div class="activities-card">
+        <h3 style="color: var(--text-primary); font-size: 1.15rem; font-weight: 600;">Extracurricular Activities & Languages</h3>
+        <ul class="activities-list">
+          <li>NIBM IT Society Member (2024 &ndash; Present)</li>
+          <li>STEMUP Educational Foundation Volunteer</li>
+          <li>School Prefect Board Member</li>
+          <li>School Chess Team Member</li>
+          <li>Languages: Sinhala (Native), English (Professional Working)</li>
+          <li>Professional References available in the downloadable CV</li>
+        </ul>
+      </div>
+
       <img src="./assets/arrow.png" class="icon arrow" alt="Arrow Down" onclick="location.href='./#contact'" />
     </section>
 
     <!-- Contact Section -->
-  <section id="contact" class="reveal">
-  <p class="section__text__p1">Get in Touch</p>
-  <h1 class="title">Contact Me</h1>
-  <p class="contact-lead">Open to internships / junior roles and freelance projects. Feel free to message me.</p>
-  <div class="contact-grid">
-    <a class="contact-card" href="mailto:chethiyasankalpa456@gmail.com">
-      <img src="./assets/email.png" class="icon contact-icon email-icon" alt="Email" />
-      <div class="contact-card__text">
-        <p class="contact-label">Email</p>
-        <p class="contact-value">chethiyasankalpa456@gmail.com</p>
-      </div>
-    </a>
-    <a class="contact-card" href="tel:+94702008522">
-      <img src="./assets/phone.png" class="icon contact-icon" alt="Phone" />
-      <div class="contact-card__text">
-        <p class="contact-label">Phone</p>
-        <p class="contact-value">+94 70 200 8522</p>
-      </div>
-    </a>
-    <a class="contact-card" href="https://www.linkedin.com/in/chethiya-sankalapa-ba3a87316/" target="_blank" rel="noopener">
-      <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn" />
-      <div class="contact-card__text">
-        <p class="contact-label">LinkedIn</p>
-        <p class="contact-value">chethiya-sankalapa</p>
-      </div>
-    </a>
-  </div>
-  <div class="contact-form-container">
-    <form id="contact-form" aria-label="Contact form">
-      <div class="field-row">
-        <input type="text" id="name" name="name" placeholder="Your name" required />
-        <input type="email" id="email" name="email" placeholder="Your email" required />
-      </div>
-      <div class="field-row">
-        <input type="text" id="subject" name="subject" placeholder="Subject" />
-      </div>
-      <div class="field-row">
-        <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-      </div>
-      <div class="btn-container">
-        <button type="submit" class="btn btn-color-1">Send Message</button>
-        <button type="button" id="download-cv-2" class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
-      </div>
-    </form>
-  </div>
-</section>
+    <section id="contact" class="reveal">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <p class="contact-lead">Open to IT support, software engineering, internship, and junior developer roles. Feel free to reach out directly.</p>
+      
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:chethiyasankalpa456@gmail.com">
+          <img src="./assets/email.png" class="icon contact-icon email-icon" alt="Email" />
+          <div class="contact-card__text">
+            <p class="contact-label">Email</p>
+            <p class="contact-value">chethiyasankalpa456@gmail.com</p>
+          </div>
+        </a>
 
+        <a class="contact-card" href="tel:+94702008522">
+          <img src="./assets/phone.png" class="icon contact-icon" alt="Phone" />
+          <div class="contact-card__text">
+            <p class="contact-label">Phone</p>
+            <p class="contact-value">+94 70 200 8522</p>
+          </div>
+        </a>
+
+        <a class="contact-card" href="https://www.google.com/maps/search/Panwila,+Sri+Lanka" target="_blank" rel="noopener">
+          <img src="./assets/checkmark.png" class="icon contact-icon" alt="Location" />
+          <div class="contact-card__text">
+            <p class="contact-label">Location</p>
+            <p class="contact-value">Panwila, Sri Lanka</p>
+          </div>
+        </a>
+
+        <a class="contact-card" href="https://www.linkedin.com/in/chethiya-sankalapa-ba3a87316/" target="_blank" rel="noopener">
+          <img src="./assets/linkedin.png" class="icon contact-icon" alt="LinkedIn" />
+          <div class="contact-card__text">
+            <p class="contact-label">LinkedIn</p>
+            <p class="contact-value">chethiya-sankalapa</p>
+          </div>
+        </a>
+      </div>
+
+      <div class="contact-form-container">
+        <form id="contact-form" aria-label="Contact form">
+          <div class="field-row">
+            <input type="text" id="name" name="name" placeholder="Your name" required />
+            <input type="email" id="email" name="email" placeholder="Your email" required />
+          </div>
+          <div class="field-row">
+            <input type="text" id="subject" name="subject" placeholder="Subject" />
+          </div>
+          <div class="field-row">
+            <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+          </div>
+          <div class="btn-container">
+            <button type="submit" class="btn btn-color-1">Send Message</button>
+            <button type="button" id="download-cv-2" class="btn btn-color-2" onclick="window.open('./assets/Chethiya_CV.pdf')">Download CV</button>
+          </div>
+        </form>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -318,11 +497,12 @@
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2025 Chethiya Sankalpa. All Rights Reserved.</p>
+      <p>Copyright &#169; 2026 Chethiya Sankalpa. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Enhanced typing effect for role with more roles
   const typedEl = document.getElementById('typed-role');
   if (typedEl) {
-    const roles = ['Mobile Developer', 'Software Engineer', 'Full‑stack Developer', 'Problem Solver', 'UI/UX Enthusiast'];
+    const roles = ['Software Engineering Graduand', 'IT Support Specialist', 'Mobile & Web Developer', 'Full‑stack Developer', 'Problem Solver'];
     let roleIndex = 0; let charIndex = 0; let deleting = false;
     const speed = 100;
     function tick(){
